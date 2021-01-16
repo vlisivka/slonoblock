@@ -9,12 +9,12 @@
 
   <title>
     
-      404: Page not found &middot; Слоноблок
+      Розрахунок термоакумулятора &middot; Слоноблок
     
   </title>
 
   
-  <link rel="canonical" href="http://localhost:4000/404.html">
+  <link rel="canonical" href="http://localhost:4000/2021/01/16/calculation_of_thermal_accumulation/">
   
 
   <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
@@ -31,6 +31,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.19/dist/shoelace/shoelace.css">
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.19/dist/shoelace/shoelace.esm.js"></script>
 
+  
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
   
 
   
@@ -113,9 +127,66 @@
       </div>
 
       <div class="container content">
-        <h1 id="404-сторінка-не-знайдена">404: Сторінка не знайдена</h1>
+        <div class="post">
+  <h1 class="post-title">Розрахунок термоакумулятора</h1>
+  <span class="post-author">Володимир Лісівка</span>
+  <span class="post-date">16 Jan 2021</span>
+  <script>
+  function p(str) { document.write(str); }
 
-<p>Тут немає того, що ви шукаєте. Перейдіть на <a href="http://localhost:4000">головну</a> сторінку.</p>
+  // Print number in locale specific way.
+  var locale_format = new Intl.NumberFormat('uk-UA');
+  function pn(number) { document.write(locale_format.format(number)); }
+  function pbn(number) { document.write('<b>',locale_format.format(number),'</b>'); }
+  
+  
+</script>
+
+<h1 id="розрахунок-термоакумулятора-для-будинку-10x8x5м">Розрахунок термоакумулятора для будинку 10x8x5м</h1>
+
+
+</div>
+
+
+<div class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2021/01/15/calculation_of_thermal_losses/">
+            Розрахунок тепловтрат будівлі
+            <small>15 Jan 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+ <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://slonoblock.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ 
 
       </div>
     </div>

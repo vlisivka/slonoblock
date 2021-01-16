@@ -4,7 +4,7 @@
  <title>Слоноблок</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-01-16T19:08:57+02:00</updated>
+ <updated>2021-01-16T23:15:27+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Володимир Лісівка</name>
@@ -13,11 +13,34 @@
 
  
  <entry>
+   <title>Розрахунок термоакумулятора</title>
+   <link href="http://localhost:4000/2021/01/16/calculation_of_thermal_accumulation/"/>
+   <updated>2021-01-16T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2021/01/16/calculation_of_thermal_accumulation</id>
+   <content type="html">&lt;script&gt;
+  function p(str) { document.write(str); }
+
+  // Print number in locale specific way.
+  var locale_format = new Intl.NumberFormat('uk-UA');
+  function pn(number) { document.write(locale_format.format(number)); }
+  function pbn(number) { document.write('&lt;b&gt;',locale_format.format(number),'&lt;/b&gt;'); }
+  
+  
+&lt;/script&gt;
+
+&lt;h1 id=&quot;розрахунок-термоакумулятора-для-будинку-10x8x5м&quot;&gt;Розрахунок термоакумулятора для будинку 10x8x5м&lt;/h1&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>Розрахунок тепловтрат будівлі</title>
    <link href="http://localhost:4000/2021/01/15/calculation_of_thermal_losses/"/>
    <updated>2021-01-15T00:00:00+02:00</updated>
    <id>http://localhost:4000/2021/01/15/calculation_of_thermal_losses</id>
    <content type="html">&lt;script&gt;
+  window.PlotlyConfig = {MathJaxConfig: 'local'}
+
   function p(str) { document.write(str); }
 
   // Print number in locale specific way.
@@ -75,11 +98,11 @@ try {
 
 &lt;p&gt;Втрати тепла через вікна розраховуються по тій самій формулі.&lt;/p&gt;
 
-&lt;p&gt;Площа $Sвк$ для &lt;script&gt;pn(кількість_вікон)&lt;/script&gt; вікон розміром &lt;script&gt;pn(ширина_вікна)&lt;/script&gt;x&lt;script&gt;pn(висота_вікна)&lt;/script&gt; м складає &lt;script&gt;pbn(площа_вікон)&lt;/script&gt; м².&lt;/p&gt;
+&lt;p&gt;Площа $S_w$ для &lt;script&gt;pn(кількість_вікон)&lt;/script&gt; вікон розміром &lt;script&gt;pn(ширина_вікна)&lt;/script&gt;x&lt;script&gt;pn(висота_вікна)&lt;/script&gt; м складає &lt;script&gt;pbn(площа_вікон)&lt;/script&gt; м².&lt;/p&gt;
 
-&lt;p&gt;Теплопровідність вікон $Uвк$ для вікон «&lt;script&gt;p(назва_вікна)&lt;/script&gt;» складає &lt;script&gt;pbn(теплопровідність_вікон)&lt;/script&gt; Вт/м²°Ц.&lt;/p&gt;
+&lt;p&gt;Теплопровідність вікон $Uw$ для вікон «&lt;script&gt;p(назва_вікна)&lt;/script&gt;» складає &lt;script&gt;pbn(теплопровідність_вікон)&lt;/script&gt; Вт/м²°Ц.&lt;/p&gt;
 
-&lt;p&gt;Втрати тепла $Qвк$ через вікна складатимуть &lt;script&gt;pbn(втрати_тепла_через_вікна);&lt;/script&gt; Вт.&lt;/p&gt;
+&lt;p&gt;Втрати тепла $Qw$ через вікна складатимуть &lt;script&gt;pbn(втрати_тепла_через_вікна);&lt;/script&gt; Вт.&lt;/p&gt;
 
 &lt;h2 id=&quot;втрати-тепла-через-двері&quot;&gt;Втрати тепла через двері&lt;/h2&gt;
 
@@ -94,11 +117,11 @@ try {
 
 &lt;p&gt;Втрати тепла через дверей розраховуються по тій самій формулі.&lt;/p&gt;
 
-&lt;p&gt;Площа $Sдв$ для &lt;script&gt;pn(кількість_дверей)&lt;/script&gt; дверей розміром &lt;script&gt;pn(ширина_двері)&lt;/script&gt;x&lt;script&gt;pn(висота_двері)&lt;/script&gt; м складає &lt;script&gt;pbn(площа_дверей)&lt;/script&gt; м².&lt;/p&gt;
+&lt;p&gt;Площа $S_d$ для &lt;script&gt;pn(кількість_дверей)&lt;/script&gt; дверей розміром &lt;script&gt;pn(ширина_двері)&lt;/script&gt;x&lt;script&gt;pn(висота_двері)&lt;/script&gt; м складає &lt;script&gt;pbn(площа_дверей)&lt;/script&gt; м².&lt;/p&gt;
 
-&lt;p&gt;Теплопровідність дверей $Uдв$ для дверей «&lt;script&gt;p(назва_дверей)&lt;/script&gt;» складає &lt;script&gt;pbn(теплопровідність_дверей)&lt;/script&gt; Вт/м²°Ц.&lt;/p&gt;
+&lt;p&gt;Теплопровідність дверей $U_d$ для дверей «&lt;script&gt;p(назва_дверей)&lt;/script&gt;» складає &lt;script&gt;pbn(теплопровідність_дверей)&lt;/script&gt; Вт/м²°Ц.&lt;/p&gt;
 
-&lt;p&gt;Втрати тепла $Qдв$ через двері складатимуть &lt;script&gt;pbn(втрати_тепла_через_двері);&lt;/script&gt; Вт.&lt;/p&gt;
+&lt;p&gt;Втрати тепла $Q_d$ через двері складатимуть &lt;script&gt;pbn(втрати_тепла_через_двері);&lt;/script&gt; Вт.&lt;/p&gt;
 
 &lt;h2 id=&quot;втрати-тепла-через-стіни&quot;&gt;Втрати тепла через стіни&lt;/h2&gt;
 
@@ -115,7 +138,7 @@ try {
 
 &lt;p&gt;Втрати тепла через стіни та стелю розраховуються як&lt;/p&gt;
 
-\[Qст = Sст \cdot ΔT \cdot λ / d\]
+\[Q_b = S_b \cdot ΔT \cdot λ / d\]
 
 &lt;p&gt;де&lt;/p&gt;
 
@@ -124,11 +147,11 @@ try {
   &lt;li&gt;$λ$ — коефіцієнт теплопровідності стіни з утеплювачем (усереднений, Вт/м°Ц).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Усереднена теплопровідність стін $Uст = λ / d$ з утеплювачем товщиною &lt;script&gt;pn(товщина_стіни)&lt;/script&gt; м з соломи, при коефіцієнті теплопровідності соломи $λ$ у &lt;script&gt;pn(теплопровідність_соломи)&lt;/script&gt; Вт/м°Ц, складає &lt;script&gt;pbn(теплопровідність_стіни)&lt;/script&gt; Вт/м²°Ц.&lt;/p&gt;
+&lt;p&gt;Усереднена теплопровідність стін $U_d = λ / d$ з утеплювачем товщиною &lt;script&gt;pn(товщина_стіни)&lt;/script&gt; м з соломи, при коефіцієнті теплопровідності соломи $λ$ у &lt;script&gt;pn(теплопровідність_соломи)&lt;/script&gt; Вт/м°Ц, складає &lt;script&gt;pbn(теплопровідність_стіни)&lt;/script&gt; Вт/м²°Ц.&lt;/p&gt;
 
 &lt;p&gt;Загальна площа $S = 2 \cdot l \cdot h + 2 \cdot w \cdot h + l \cdot w$ утеплених зовнішніх поверхонь будинку розміром &lt;script&gt;pn(довжина_будинку)&lt;/script&gt;x&lt;script&gt;pn(ширина_будинку)&lt;/script&gt;x&lt;script&gt;pn(висота_будинку)&lt;/script&gt; м, без врахування площі фундаменту та вікон і дверей: &lt;script&gt;pbn(площа_поверхні_будинку)&lt;/script&gt; м².&lt;/p&gt;
 
-&lt;p&gt;Таким чином, втрати тепла через стіни $Qст$ складатимуть &lt;script&gt;pbn(втрати_тепла_через_стіни)&lt;/script&gt; Вт.&lt;/p&gt;
+&lt;p&gt;Таким чином, втрати тепла через стіни $Q_b$ складатимуть &lt;script&gt;pbn(втрати_тепла_через_стіни)&lt;/script&gt; Вт.&lt;/p&gt;
 
 &lt;h2 id=&quot;втрати-тепла-через-вентиляцію&quot;&gt;Втрати тепла через вентиляцію&lt;/h2&gt;
 
@@ -151,7 +174,7 @@ try {
 
 &lt;p&gt;Втрати тепла через вентиляцію з рекуператором тепла рахуються як&lt;/p&gt;
 
-\[Qвн = v \cdot ρ \cdot c \cdot ΔTвн\]
+\[Q_v = v \cdot ρ \cdot c \cdot ΔT_v\]
 
 &lt;p&gt;де&lt;/p&gt;
 
@@ -159,7 +182,7 @@ try {
   &lt;li&gt;$v$ — обʼєм повітря, який вентилюється за секунду (м³/с),&lt;/li&gt;
   &lt;li&gt;$ρ$ — густина повітря (&lt;script&gt;pn(густина_повітря)&lt;/script&gt; кг/м³),&lt;/li&gt;
   &lt;li&gt;$с$ - коефіцієнт теплоємності повітря (&lt;script&gt;pn(теплоємність_повітря)&lt;/script&gt; Дж/кг°Ц),&lt;/li&gt;
-  &lt;li&gt;$ΔTвн$ — різниця температур, на яку потрібно підігріти повітря після проходження через рекуператор.&lt;/li&gt;
+  &lt;li&gt;$ΔT_v$ — різниця температур, на яку потрібно підігріти повітря після проходження через рекуператор.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Обʼєм повітря, який вентилюється, розраховується як&lt;/p&gt;
@@ -178,7 +201,7 @@ try {
 
 &lt;p&gt;Ефективність рекуператора при &lt;script&gt;pn(температура_ззовні)&lt;/script&gt;°Ц складає &lt;script&gt;pn(ккд_рекуператора*100)&lt;/script&gt; %. Тобто, після проходження рекуператора, температура зовнішнього повітря піднімається до &lt;script&gt;pn(температура_ззовні+різниця_температур * ккд_рекуператора)&lt;/script&gt;°Ц, а отже потрібно догріти &lt;script&gt;pn(обʼєм_повітря_на_секунду)&lt;/script&gt; м³ повітря на &lt;script&gt;pn(різниця_температур_для_догрівання)&lt;/script&gt;°Ц.&lt;/p&gt;
 
-&lt;p&gt;Відповідно $Qвн$ складає &lt;script&gt;pbn(втрати_тепла_через_вентиляцію)&lt;/script&gt; Вт (або Дж/с).&lt;/p&gt;
+&lt;p&gt;Відповідно $Q_v$ складає &lt;script&gt;pbn(втрати_тепла_через_вентиляцію)&lt;/script&gt; Вт (або Дж/с).&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -191,9 +214,25 @@ try {
 
 &lt;p&gt;Сумарні втрати тепла будинку через стіни, стелю, вікна, двері, та вентиляцію можна порахувати як&lt;/p&gt;
 
-\[Q = Qст + Qвк + Qдв + Qвн\]
+\[Q = Q_b + Q_w + Q_d + Q_v\]
 
 &lt;p&gt;і вони складають &lt;script&gt;pbn(сумарні_втрати_тепла)&lt;/script&gt; Вт.&lt;/p&gt;
+
+&lt;h2 id=&quot;розподіл-втрат-тепла-за-категоріями&quot;&gt;Розподіл втрат тепла за категоріями&lt;/h2&gt;
+
+&lt;script src=&quot;https://cdn.plot.ly/plotly-basic-latest.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;div id=&quot;heat_loss_contibution_chart&quot;&gt;&lt;!-- Plotly chart will be drawn inside this DIV --&gt;&lt;/div&gt;
+&lt;script&gt;
+var heat_loss_contibution_chart_data = [{
+  values: [втрати_тепла_через_стіни, втрати_тепла_через_вікна, втрати_тепла_через_двері, втрати_тепла_через_вентиляцію],
+  labels: ['Стіни', 'Вікна', 'Двері', 'Вентиляція'],
+  type: 'pie'
+}];
+
+Plotly.newPlot('heat_loss_contibution_chart', heat_loss_contibution_chart_data);
+&lt;/script&gt;
+
 </content>
  </entry>
  
