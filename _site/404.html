@@ -37,6 +37,30 @@
 </head>
 
 
+<style>
+nav {}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  float: left;
+  margin-right: 0.5em;
+}
+nav ul li a {
+  padding: 0.25em 1em;
+  text-decoration: none; /* no underline */
+  background-color: lightgreen;
+  color: #4312AE; /* dark blue */
+  border: 2px solid black;
+  border-top-left-radius: 1em 1em; /* rounded corner! */
+  border-top-right-radius: 1em 1em; /* another rounded corner! */
+}
+nav ul li a:hover, nav ul li a:focus {
+  color: black;
+  background-color: white;
+  transform: scale(1.5);
+}
+</style>
   <body>
 
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
@@ -105,9 +129,22 @@
     <div class="wrap">
       <div class="masthead">
         <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">Слоноблок</a>
-            <small>Екоощадне будівництво</small>
+
+<nav>
+  <ul>
+    <li><a href="/services/">Послуги</a></li>
+    <li><a href="/products/">Продукція</a></li>
+    <li><a href="/prices/">Ціни</a></li>
+    <li><a href="/faq/">ЧаПи</a></li>
+    <li><a href="/gallery/">Галерея</a></li>
+    <li><a href="/blog/">Блог</a></li>
+    <li><a href="/about/">Про нас</a></li>
+    <li><a href="tel:+380503751790">+380503751790</a></li>
+    <li><a href="mailto:slonoblock&#64;gmail.com">slonoblock&#64;gmail.com</a></li>
+  </ul>
+</nav>
+<br/>
+
           </h3>
         </div>
       </div>
